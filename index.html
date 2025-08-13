@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yousef Ahmed - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --card:#14161b;
+      --muted:#8aa3b0;
+      --text:#e8f0f7;
+      --brand1:#6ee7f9;
+      --brand2:#7c3aed;
+      --accent:#00d4ff;
+      --ring: rgba(108, 99, 255, .35);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Poppins,system-ui,Arial,sans-serif;background: radial-gradient(1000px 500px at 100% -10%,rgba(124,58,237,.25),transparent),
+          radial-gradient(800px 400px at -10% 10%,rgba(110,231,249,.18),transparent),
+          var(--bg);color:var(--text)}
+    a{text-decoration:none;color:inherit}
+    /* Navbar */
+    .nav{position:fixed;inset-inline:0;top:0;z-index:50;backdrop-filter: blur(10px);
+      background:linear-gradient(90deg,rgba(10,10,10,.75),rgba(10,10,10,.35));
+      border-bottom:1px solid rgba(255,255,255,.05)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:auto;padding:14px 20px}
+    .brand{font-weight:700;letter-spacing:.4px;background:linear-gradient(90deg,var(--brand1),var(--brand2));
+      -webkit-background-clip:text;background-clip:text;color:transparent}
+    .nav ul{display:flex;gap:18px;list-style:none}
+    .nav a{color:var(--text);opacity:.9}
+    .nav a:hover{opacity:1}
+    /* Sections */
+    section{max-width:1100px;margin:0 auto;padding:90px 20px}
+    .pad-top{padding-top:120px}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+    .photo{
+      width:100%;max-width:320px;height:380px;border-radius:22px;object-fit:cover;
+      border:2px solid rgba(255,255,255,.06);box-shadow:0 10px 40px rgba(0,0,0,.45)
+    }
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
+      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);font-size:12px;color:var(--muted)}
+    .title{font-size:46px;line-height:1.1;margin:12px 0 6px}
+    .subtitle{color:var(--muted);max-width:60ch}
+    .btns{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:transparent}
+    .btn:hover{background:rgba(255,255,255,.06)}
+    .btn.primary{background:linear-gradient(90deg,var(--brand1),var(--brand2));border:none;color:#0b0c10;font-weight:700}
+    /* Cards Grid */
+    .grid{display:grid;gap:18px}
+    /* Skills */
+    .skills-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;
+      box-shadow:0 20px 40px rgba(0,0,0,.35)}
+    .card h3{font-size:18px;margin-bottom:12px}
+    .skill{margin:12px 0}
+    .skill-head{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
+    .bar{height:10px;border-radius:999px;background:#0e1116;border:1px solid rgba(255,255,255,.06);overflow:hidden}
+    .bar>span{display:block;height:100%;background:linear-gradient(90deg,var(--brand1),var(--brand2))}
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .pill{padding:8px 12px;border-radius:999px;background:#0e1116;border:1px solid rgba(255,255,255,.08);font-size:13px;color:var(--text)}
+    /* Projects (placeholder cards) */
+    .projects{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+    .project{padding:18px}
+    .project h4{margin-bottom:6px}
+    .project a{color:var(--accent)}
+    /* Contact */
+    .contact{text-align:center}
+    .contact a{color:var(--accent)}
+    /* Footer */
+    footer{padding:28px 20px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
+    /* Responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr;gap:26px;text-align:center}
+      .photo{margin-inline:auto;height:340px}
+      .skills-wrap{grid-template-columns:1fr}
+      .title{font-size:38px}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Yousef Ahmed</div>
+      <ul>
+        <li><a href="#about">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="about" class="pad-top">
+    <div class="hero">
+      <div>
+        <img class="photo" src="./images/yussif.jpg" alt="Yousef Ahmed"/>
+      </div>
+      <div>
+        <div class="tag">.NET Web Developer • Full-Stack</div>
+        <h1 class="title">Yousef Ahmed</h1>
+        <p class="subtitle">
+          
+I’m a full-stack web developer, crafting efficient and scalable web solutions to bring ideas to life through full-stack .NET development.
+        </p>
+        <div class="btns">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn primary" href="#projects">My Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2 class="title" style="font-size:32px;margin-bottom:14px;">Skills</h2>
+    <p class="subtitle" style="margin-bottom:22px;">Technical skills I use daily, and soft skills that help me ship quality work.</p>
+
+    <div class="skills-wrap">
+      <!-- Technical -->
+      <div class="card">
+        <h3>Technical Skills</h3>
+
+        <!-- Adjust percentages freely -->
+        <div class="skill">
+          <div class="skill-head"><span>HTML</span><span>90%</span></div>
+          <div class="bar"><span style="width:90%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>CSS</span><span>85%</span></div>
+          <div class="bar"><span style="width:85%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>JavaScript</span><span>80%</span></div>
+          <div class="bar"><span style="width:80%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>C++</span><span>70%</span></div>
+          <div class="bar"><span style="width:70%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>C#</span><span>85%</span></div>
+          <div class="bar"><span style="width:85%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>OOP</span><span>80%</span></div>
+          <div class="bar"><span style="width:80%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>SQL Server</span><span>75%</span></div>
+          <div class="bar"><span style="width:75%"></span></div>
+        </div>
+
+        <div class="pill-row" style="margin-top:14px">
+          <span class="pill">ASP.NET Core</span>
+          <span class="pill">Entity Framework</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">Git & GitHub</span>
+        </div>
+      </div>
+
+      <!-- Soft -->
+      <div class="card">
+        <h3>Soft Skills</h3>
+
+        <div class="skill">
+          <div class="skill-head"><span>Communication</span><span>85%</span></div>
+          <div class="bar"><span style="width:85%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>Problem Solving</span><span>90%</span></div>
+          <div class="bar"><span style="width:90%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>Teamwork</span><span>88%</span></div>
+          <div class="bar"><span style="width:88%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>Time Management</span><span>80%</span></div>
+          <div class="bar"><span style="width:80%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>Adaptability</span><span>82%</span></div>
+          <div class="bar"><span style="width:82%"></span></div>
+        </div>
+        <div class="pill-row" style="margin-top:14px">
+          <span class="pill">Attention to Detail</span>
+          <span class="pill">Growth Mindset</span>
+          <span class="pill">Client Focus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (placeholders – replace links) -->
+  <section id="projects">
+    <h2 class="title" style="font-size:32px;margin-bottom:14px;">Projects</h2>
+    <div class="grid projects">
+      <div class="card project">
+        <h4>Real Estate Website</h4>
+        <p class="subtitle">HTML • CSS • JavaScript</p>
+        <a href="#" target="_blank">View Project →</a>
+      </div>
+      <div class="card project">
+        <h4>E-Commerce Website</h4>
+        <p class="subtitle">HTML • CSS • JavaScript</p>
+        <a href="#" target="_blank">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2 class="title" style="font-size:32px;margin-bottom:14px;">Contact</h2>
+    <p class="subtitle" style="margin-bottom:10px; margin-left: 200px;">Feel free to reach out for collaboration or opportunities.</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yussiif/" target="_blank">yussiif</a></p>
+    <p>GitHub: <a href="https://github.com/Yussif76" target="_blank">Yussif76</a></p>
+    <p>Email: <a href="mailto:youremail@example.com">usiif.ahmed@gmail.com</a></p>
+  </section>
+
+  <footer>© 2025 Yousef Ahmed — All Rights Reserved</footer>
+</body>
+</html>
